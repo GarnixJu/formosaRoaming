@@ -8,16 +8,22 @@ import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule } fr
 import { AppComponent } from './app.component';
 import { ChartCreationComponent } from './chart-creation/chart-creation.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartCreationComponent
+    ChartCreationComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule, 
+    MatSidenavModule, 
+    MatToolbarModule, 
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
