@@ -28,6 +28,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Further installation
 
+### for materials
 ```
  npm install --save @angular/material @angular/animations
 ```
+### for bootstrap
+```
+npm install --save bootstrap@4.0.0-beta.2 font-awesome
+npm install bootstrap@4.0.0-alpha.6 --save
+```
+
+### for Bootstrap 4
+```
+npm install bootstrap@next --save
+```
+

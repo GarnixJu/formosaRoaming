@@ -20,9 +20,9 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule, 
-    MatSidenavModule, 
-    MatToolbarModule, 
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
     MatListModule
   ],
   providers: [],
