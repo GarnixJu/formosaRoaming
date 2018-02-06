@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
-.postit {
+div.postit {
     position: relative;
-    left:-50px;
+    left:-25px;
     top: -50px;
    line-height: 1;
    text-align:center;     
    width: 100%;      
+   min-width:50px;
    min-height:200px;
    max-height:200px;
+   padding-top: 10px;
    padding-bottom:20px;
    position:relative;   
    border:1px solid #E8E8E8;  
    border-top:30px solid #fdfd86;
    font-family:'Reenie Beanie';    
-   font-size:2.5em;      
+   font-size:2.2em;      
    border-bottom-right-radius: 60px 5px;
    display:inline-block;    
     background: #ffff88; /* Old browsers */
@@ -25,6 +27,12 @@
  background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
  }
+
+span.post-it {
+    color:brown;
+    font-size:2em;      
+    font-weight: bold;
+}
  
 
 div.postcard-wrap {
