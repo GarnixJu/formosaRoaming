@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ChartCreationComponent } from './chart-creation/chart-creation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './user/user.component';
+import {PostcardComponent} from './user/postcard/postcard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartCreationComponent,
-    UserComponent
+    UserComponent,
+    PostcardComponent
   ],
   imports: [
     BrowserModule,

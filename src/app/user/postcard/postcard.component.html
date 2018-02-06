@@ -1,0 +1,10 @@
+<div class="col-sm-4 postcard-wrap">
+    <div class="col-sm-10 panel panel-default postcard">
+        <img src="{{ imageURI }}" class="img-responsive margin" style="width:100%" alt="Image">
+        <h4>{{ title }}</h4>
+        <p><span class="glyphicon glyphicon-time"></span>&nbsp;{{ duration }}</p>
+    </div>
+    <div class="col-sm-2" ng-if="unread_comment != 0">
+      <div class="postit">new!<br><span class="glyphicon glyphicon-comment"></span><br><span style="color:brown;">{{ unread_comment }}</span></div>
+    </div>
+</div>

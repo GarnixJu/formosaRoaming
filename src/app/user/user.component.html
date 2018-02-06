@@ -1,3 +1,97 @@
-<p>
-  user works!
-</p>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="//codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="//d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"></script>
+
+
+
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <div class="col-sm-3 profile">
+    <img src="assets/img/person.jpg" class="img-circle" alt="my-photo">
+    <h4>{{ user.name }}</h4>
+    <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;{{ user.email }}</p>
+    <p>{{ user.visited.length }} counties visited.</p>
+    <p>...</p>
+    <p>...</p>
+  </div>
+
+  <div class="col-sm-2 passport">
+    <div class="post" *ngFor="let place of user.visited;">
+      <img src="{{ place.stamp }}" class="stamp">
+      <img src="assets/img/postmark.png" alt="Postage mark" class="postmark">
+    </div>
+  </div>
+  <div class="col-sm-7">
+      <img src="assets/img/map.png" class="map" alt="travel-map">
+      <!--<app-usermap></app-usermap>-->
+  </div>
+  <!--<div class="col-sm-2 buddies">
+    <ul class='circle-container'>
+      <li><img src='http://lorempixel.com/100/100/city' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/nature' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/abstract' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/cats' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/food' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/animals' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/cats' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/food' alt="..." /></li>
+      <li><img src='http://lorempixel.com/100/100/animals' alt="..." /></li>
+    </ul>
+    <br>
+    <img class="buddies-core" src='assets/img/buddies.png' alt="travel-buddies"/>
+  </div>-->
+
+
+
+</div>
+
+<!-- Second Container -->
+<!--<div class="container-fluid bg-2 text-center">
+  <table cellspacing="0" cellpadding="0" class="menu-strip">
+    <tr>
+      <td>
+        <div class="menu-item">My Plan</div>
+      </td>
+      <td>
+        <div class="menu-item">My Memories</div>
+      </td>
+    </tr>
+  </table>
+</div>-->
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">
+  <h2 class="seal">My Plans</h2>
+  <br>
+  <br>
+  <br>
+  <div class="row">        
+      <app-postcard *ngFor="let post of planList;" [title]="post.title" [imageURI]="post.imageURI" 
+                    [duration]="post.duration" [unread_comment]="post.unread_comment"></app-postcard>
+  </div>
+</div>
+
+
+<!-- Forth Container (Grid) -->
+<div class="container-fluid bg-4 text-center">
+    <h2 class="seal">My Memories</h2>
+    <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">    
+      <app-postcard *ngFor="let post of memList;" [title]="post.title" [imageURI]="post.imageURI" 
+                    [duration]="post.duration" [unread_comment]="post.unread_comment"></app-postcard>
+  </div>
+</div>

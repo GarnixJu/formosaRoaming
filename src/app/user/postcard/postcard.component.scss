@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+.postit {
+    position: relative;
+    left:-50px;
+    top: -50px;
+   line-height: 1;
+   text-align:center;     
+   width: 100%;      
+   min-height:200px;
+   max-height:200px;
+   padding-bottom:20px;
+   position:relative;   
+   border:1px solid #E8E8E8;  
+   border-top:30px solid #fdfd86;
+   font-family:'Reenie Beanie';    
+   font-size:2.5em;      
+   border-bottom-right-radius: 60px 5px;
+   display:inline-block;    
+    background: #ffff88; /* Old browsers */
+ background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+ background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+ background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+ background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+ background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+ background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ }
+ 
+
+div.postcard-wrap {
+    padding-bottom: 50px;
+}
+
+div.postcard {
+    position: relative;
+    left: 70px;
+    background-color: #fff;
+    padding: 20px;
+    cursor: pointer;
+}
+
+div.postcard > img {
+    padding-top: 8px;
+    border-bottom: 3px solid #666;
+}
+
+div.postcard > h4 {
+    padding-top: 15px;
+}

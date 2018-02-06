@@ -1,0 +1,217 @@
+
+  @function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+  
+    @return -$randomNum;
+  }
+
+.menu-strip {
+    width: 100%;
+    background: #fff;
+    border: none;
+}
+
+td {
+    background-color: #fff;
+}
+
+.menu-item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+td :hover{
+    cursor: pointer;
+    background-color: #bbb;
+}
+
+
+/***** For Grids *****/
+.bg-3 {
+    padding: 10%;
+    background-color: aliceblue;
+}
+.bg-4 {
+    padding: 10%;
+    background-color: bisque;
+}
+
+h2.seal {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    color: red;
+    padding: 15px;
+    background-color: inherit;
+    box-shadow:inset 0px 0px 0px 10px red;
+    -webkit-transform: rotate(#{randomNum(3, 6)}deg);
+    -o-transform: rotate(#{randomNum(3, 6)}deg);
+    -moz-transform: rotate(#{randomNum(3, 6)}deg);
+    -ms-transform: rotate(#{randomNum(3, 6)}deg);
+  }
+  
+  h2.seal:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("http://i.imgur.com/5O74VI6.jpg");
+    mix-blend-mode: lighten;
+  }
+  
+
+
+
+
+
+/***** For Map *****/
+.bg-1 {
+    background-color: #00bfff;
+    height: 80%;
+    padding: 10px;
+}
+
+img.map {
+    position: relative;
+    height: 80%;
+    width: 100%;
+}
+
+path {
+    cursor: pointer;
+}
+  
+#info {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    width: 100px;
+    text-align: center;
+} 
+
+#name {
+    font-size: 1.2em;
+}
+
+#unit {
+    font-size: 12px;
+}
+
+/***** Profile *****/
+.profile {
+    padding: 50px;
+}
+div.profile > img {
+    width: 100%;
+}
+
+/***** For Stamp *****/
+.passport {
+    padding-left: 20px;
+    padding-top: 50px;
+}
+.post {
+    height: 90px;
+    overflow: hidden;
+}
+  .stamp {
+    width: 120px;
+    height: 84px;
+    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/stamp-border.png) 8 round;
+    border-width: 8px;
+    border-style: solid;
+    box-shadow:inset 5px 5px 5px 10px #555;
+    -webkit-transform: rotate(#{randomNum(5, 12)}deg);
+    -o-transform: rotate(#{randomNum(5, 12)}deg);
+    -moz-transform: rotate(#{randomNum(5, 12)}deg);
+    -ms-transform: rotate(#{randomNum(5, 12)}deg);
+  }
+  .postmark {
+    width: 80px;  
+    position: relative;
+    left: -50px;
+  }
+
+
+/*.stamp {
+    box-sizing: border-box;
+  }*/
+  
+  
+
+/***** Buddies *****/
+.buddies {
+    display: none;
+    position: relative;
+    top: -120px;
+    left: 20px;
+}
+.buddies-core {
+    position: relative;
+    width: 300px;
+    top: -400px;
+    left: 60px;
+}
+
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {
+    position: relative;
+    width:  $circle-size;
+    height: $circle-size;
+    padding: 0;
+    border-radius: 50%; 
+    list-style: none;       
+    
+    > * {
+      display: block;
+      position: absolute;
+      top:  50%; 
+      left: 50%;
+      width:  $item-size;
+      height: $item-size;
+      margin: -($item-size / 2);
+    
+      $angle: (360 / $item-count);
+      $rot: 90;
+  
+      @for $i from 1 through $item-count {
+        &:nth-of-type(#{$i}) {
+          transform: 
+            rotate($rot * 1deg) 
+            translate($circle-size / 2) 
+            rotate($rot * -1deg);
+        }
+  
+        $rot: $rot + $angle;
+      }
+    }
+  }
+
+.circle-container {
+    @include on-circle($item-count: 16, $circle-size: 500px, $item-size: 80px);
+    margin: 5em auto 0;
+    border: none;//solid 5px tomato;
+    
+    img { 
+      display: block; 
+      max-width: 100%; 
+      border-radius: 50%;
+      filter: grayscale(100%);
+      border: none;//solid 5px tomato;
+      transition: .15s;
+      
+      &:hover,
+      &:active {
+        filter: grayscale(0);
+        cursor: pointer;
+      }
+    }
+  }
